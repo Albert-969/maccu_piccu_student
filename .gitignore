@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+
+# Java/Maven build output
+target/
+
+# Staff-only assessment artifacts (never publish to student repo)
+PRIVATE_TEST_BLUEPRINT_STAFF.md
+staff/
+private/
+**/*_STAFF.md
+**/*_PRIVATE.md
