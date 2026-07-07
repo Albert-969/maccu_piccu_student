@@ -35,7 +35,19 @@ public class Menu {
     // TODO (students):
     // Keep this robust: reject invalid and out-of-range input safely.
     public int getUserChoice() {
-        throw new UnsupportedOperationException("TODO: implement Menu.getUserChoice");
+        while (true) {
+            String input = getUserInput("Enter your choice: ");
+            try {
+                int choice = Integer.parseInt(input);
+                if (choice == 1 || choice == 2) {
+                    return choice;
+                } else {
+                    System.out.println("Please enter 1 or 2.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number.");
+            }
+        }
     }
 
     // TODO (students):
@@ -50,6 +62,15 @@ public class Menu {
     // TODO (students):
     // Validate replay response based on paper instructions.
     public boolean askToPlayAgain() {
-        throw new UnsupportedOperationException("TODO: implement Menu.askToPlayAgain");
+        while (true) {
+            String input = getUserInput("Do you want to play again? (y/n): ");
+            if (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes")) {
+                return true;
+            } else if (input.equalsIgnoreCase("n") || input.equalsIgnoreCase("no")) {
+                return false;
+            } else {
+                System.out.println("Invalid input. Please enter y or n.");
+            }
+        }
     }
 }

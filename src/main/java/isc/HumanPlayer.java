@@ -11,7 +11,8 @@ public class HumanPlayer extends Player {
     // At minimum, this method should complete one turn for this player.
     @Override
     public void takeTurn(DiceGame game) {
-        throw new UnsupportedOperationException("TODO: implement HumanPlayer.takeTurn");
+        System.out.println("\n" + getName() + "'s turn:");
+        game.playTurn(this);
     }
 
     @Override

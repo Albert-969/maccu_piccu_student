@@ -11,7 +11,8 @@ public class ComputerPlayer extends Player {
     // The strategy details are part of the paper handout.
     @Override
     public void takeTurn(DiceGame game) {
-        throw new UnsupportedOperationException("TODO: implement ComputerPlayer.takeTurn");
+        System.out.println("\n" + getName() + "'s turn:");
+        game.playTurn(this);
     }
 
     @Override
